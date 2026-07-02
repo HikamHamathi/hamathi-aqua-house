@@ -40,3 +40,51 @@
   cursor:pointer;
   font-size:16px;
 }
+.product-card{
+    position:relative;
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:red;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.wishlist{
+    position:absolute;
+    top:15px;
+    right:15px;
+    border:none;
+    background:white;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.rating{
+    color:gold;
+    margin:10px 0;
+}
+
+.cart-btn{
+    width:100%;
+    padding:12px;
+    background:#00C853;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.cart-btn:hover{
+    background:#009624;
+}
