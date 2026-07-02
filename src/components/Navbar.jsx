@@ -3,7 +3,7 @@ import "../styles/Navbar.css";
 
 function Navbar() {
 
-    const { darkMode, toggleTheme } = useTheme();
+    // const { darkMode, toggleTheme } = useTheme();
 
     return (
 
@@ -37,10 +37,10 @@ function Navbar() {
                 />
 
                 <button
-                    onClick={toggleTheme}
+                    // onClick={toggleTheme}
                     className="theme-btn"
                 >
-                    {darkMode ? "☀️" : "🌙"}
+                    🌙
                 </button>
 
                 <button className="cart">
