@@ -1,26 +1,60 @@
-import "./Navbar.css";
+import { useTheme } from "../context/ThemeContext";
+import "../styles/Navbar.css";
 
 function Navbar() {
-  return (
-    <nav className="navbar">
-      <div className="logo">
-        🐠 Hamathi Aqua House
-      </div>
 
-      <ul className="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Fish</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Plants</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    const { darkMode, toggleTheme } = useTheme();
 
-      <div className="nav-icons">
-        <button className="theme-btn">🌙</button>
-        <button className="cart-btn">🛒</button>
-      </div>
-    </nav>
-  );
+    return (
+
+        <nav className="navbar">
+
+            <div className="logo">
+
+                🐠 Hamathi Aqua House
+
+            </div>
+
+            <ul>
+
+                <li>Home</li>
+
+                <li>Fish</li>
+
+                <li>Accessories</li>
+
+                <li>Plants</li>
+
+                <li>Contact</li>
+
+            </ul>
+
+            <div className="right">
+
+                <input
+                    type="text"
+                    placeholder="Search..."
+                />
+
+                <button
+                    onClick={toggleTheme}
+                    className="theme-btn"
+                >
+                    {darkMode ? "☀️" : "🌙"}
+                </button>
+
+                <button className="cart">
+
+                    🛒
+
+                </button>
+
+            </div>
+
+        </nav>
+
+    )
+
 }
 
 export default Navbar;
