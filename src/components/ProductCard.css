@@ -29,7 +29,7 @@
   font-size:20px;
 }
 
-.product-card button{
+/* .product-card button{
   margin-top:15px;
   width:100%;
   padding:12px;
@@ -39,7 +39,7 @@
   border-radius:30px;
   cursor:pointer;
   font-size:16px;
-}
+} */
 .product-card{
     position:relative;
 }
