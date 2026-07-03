@@ -3,7 +3,10 @@ import "../styles/Navbar.css";
 import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 
-function Navbar() {
+function Navbar({
+  search,
+  setSearch
+}) {
 
     const { darkMode, toggleTheme } = useTheme();
     const { cart, openCart } = useCart();
@@ -39,7 +42,11 @@ function Navbar() {
                 <input
                     type="text"
                     placeholder="Search..."
-            />
+                    value={search}
+                    onChange={(e) =>
+                setSearch(e.target.value)
+                }
+                />
             </div>
 
                 <button

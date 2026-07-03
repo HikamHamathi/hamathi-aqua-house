@@ -6,12 +6,17 @@ import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import CartDrawer from "../components/CartDrawer";
 
-function Home() {
+function Home({ search, setSearch }) {
   return (
     <>
-      <Navbar />
+      <Navbar 
+      search={search}
+      setSearch={setSearch}
+      />
       <Hero />
-        <ProductSection />
+        <ProductSection
+        search={search} 
+        />
         <Features />
         <Testimonials />
         <Contact />

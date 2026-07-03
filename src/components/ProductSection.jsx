@@ -2,7 +2,12 @@ import ProductCard from "./ProductCard";
 import "./ProductSection.css";
 import products from "../data/products";
 
-function ProductSection() {
+function ProductSection({ search }) {
+  const filteredProducts = products.filter((product) =>
+  product.name
+    .toLowerCase()
+    .includes(search.toLowerCase())
+    );
   return (
     <section className="products">
 
@@ -10,7 +15,7 @@ function ProductSection() {
 
       <div className="product-grid">
 
-        {products.map((product) => (
+        {filteredproducts.map((product) => (
 
           <ProductCard
             key={product.id}
