@@ -4,10 +4,7 @@ import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 import { useSearch } from "../context/SearchContext";
 
-function Navbar({
-  search,
-  setSearch
-}) {
+function Navbar() {
 
     const { darkMode, toggleTheme } = useTheme();
     const { cart, openCart } = useCart();
@@ -57,8 +54,7 @@ function Navbar({
                 }
                 }}
                 />
-
-                </div>
+                
             </div>
 
                 <button
