@@ -64,3 +64,15 @@
 .checkout-btn:hover{
     background:#009624;
 }
+.delete-btn{
+    margin-left:auto;
+    border:none;
+    background:none;
+    font-size:22px;
+    cursor:pointer;
+    color:red;
+}
+
+.delete-btn:hover{
+    transform:scale(1.15);
+}

@@ -3,7 +3,12 @@ import { useCart } from "../context/CartContext";
 
 function CartDrawer() {
 
-  const { cart, isCartOpen, closeCart } = useCart();
+  const {
+  cart,
+  isCartOpen,
+  closeCart,
+  removeFromCart,
+} = useCart();
 
   if (!isCartOpen) return null;
 
@@ -38,6 +43,12 @@ function CartDrawer() {
                 <p>Rs. {item.price}</p>
 
               </div>
+              <button
+                className="delete-btn"
+                onClick={() => removeFromCart(item.id)}
+                >
+                🗑️
+              </button>
 
             </div>
 
