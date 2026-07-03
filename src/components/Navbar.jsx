@@ -50,12 +50,20 @@ function Navbar() {
             <FaMoon />}
             </button>
 
-            <button className="cart" onClick={openCart}>
+            <button
+            className="cart"
+            onClick={() => {
+            console.log("Cart clicked");
+            openCart();
+            }}
+            ></button>
+
+            {/* <button className="cart" onClick={openCart}>
             <FaShoppingCart />
             <span className="cart-count">
             {cart.length}
             </span>
-            </button>
+            </button> */}
 
             </div>
 
