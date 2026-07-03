@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { CartProvider } from "./context/CartContext";
+import { SearchProvider } from "./context/SearchContext";
 
 import App from "./App";
 
@@ -12,11 +13,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 <ThemeProvider>
 
+<SearchProvider>
+
 <CartProvider>
 
 <App/>
 
 </CartProvider>
+
+</SearchProvider>
 
 </ThemeProvider>
 
