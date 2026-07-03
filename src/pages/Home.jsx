@@ -15,8 +15,8 @@ function Home() {
         <Features />
         <Testimonials />
         <Contact />
-        <footer />
         <CartDrawer />
+        <footer />
     </>
   );
 }
