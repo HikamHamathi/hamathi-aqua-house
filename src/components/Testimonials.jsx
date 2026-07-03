@@ -13,7 +13,7 @@ function Testimonials() {
             "Excellent quality fish. Healthy and active. Highly recommended!"
           </p>
           <h4>⭐⭐⭐⭐⭐</h4>
-          <span>- Kasun Perera</span>
+          <span>-Dhaanish Akther-</span>
         </div>
 
         <div className="testimonial-card">
@@ -21,7 +21,7 @@ function Testimonials() {
             "Fast delivery and very friendly customer service."
           </p>
           <h4>⭐⭐⭐⭐⭐</h4>
-          <span>- Nadeesha Silva</span>
+          <span>-Dhaanish Akther-</span>
         </div>
 
         <div className="testimonial-card">
@@ -29,7 +29,7 @@ function Testimonials() {
             "Best aquarium shop in Sri Lanka. Will definitely buy again."
           </p>
           <h4>⭐⭐⭐⭐⭐</h4>
-          <span>- Dilshan Fernando</span>
+          <span>-Dhaanish Akther-</span>
         </div>
 
       </div>
