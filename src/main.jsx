@@ -8,6 +8,8 @@ import { ThemeProvider } from "./context/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 
+<React.StrictMode>
+
 <ThemeProvider>
 
 <CartProvider>
@@ -17,5 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 </CartProvider>
 
 </ThemeProvider>
+
+</React.StrictMode>
 
 );
