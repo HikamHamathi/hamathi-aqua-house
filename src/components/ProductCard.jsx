@@ -6,14 +6,14 @@ function ProductCard({ id, image, name, price }) {
 
   const { addToCart } = useCart();
 
-  const handleAdd = () => {
-    addToCart({
-      id,
-      image,
-      name,
-      price
-    });
-  };
+const handleAdd = () => {
+  addToCart({
+    id,
+    image,
+    name,
+    price
+  });
+};
 
   return (
     <div className="product-card">
@@ -36,19 +36,12 @@ function ProductCard({ id, image, name, price }) {
         Rs. {price}
       </p>
 
-      <button
+    <button
       className="cart-btn"
-      onClick={() =>
-    addToCart({
-      id,
-      image,
-      name,
-      price,
-    })
-  }
->
-  🛒 Add to Cart
-</button>
+      onClick={handleAdd}
+      >
+    🛒 Add to Cart
+    </button>
 
     </div>
   );
