@@ -6,7 +6,7 @@ import { useCart } from "../context/CartContext";
 function Navbar() {
 
     const { darkMode, toggleTheme } = useTheme();
-    const { cart } = useCart();
+    const { cart, openCart } = useCart();
 
     return (
 
@@ -50,7 +50,7 @@ function Navbar() {
             <FaMoon />}
             </button>
 
-            <button className="cart">
+            <button className="cart" onClick={openCart}>
             <FaShoppingCart />
             <span className="cart-count">
             {cart.length}
