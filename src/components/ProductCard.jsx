@@ -1,6 +1,5 @@
 import "./ProductCard.css";
 import { useCart } from "../context/CartContext";
-import { useCart } from "../context/CartContext";
 
 function ProductCard({ id, image, name, price }) {
 
