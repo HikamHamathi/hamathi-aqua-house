@@ -4,7 +4,7 @@ import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 function Navbar() {
 
-    // const { darkMode, toggleTheme } = useTheme();
+    const { darkMode, toggleTheme } = useTheme();
 
     return (
 
