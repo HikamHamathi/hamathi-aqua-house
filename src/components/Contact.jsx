@@ -14,7 +14,7 @@ function Contact() {
 
           <p>📍 Sri Lanka</p>
 
-          <p>📞 +94 77 XXX XXXX</p>
+          <p>📞 +94 78 676 7081</p>
 
           <p>📧 hamathiaquahouse@gmail.com</p>
 
