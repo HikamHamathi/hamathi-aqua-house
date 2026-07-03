@@ -1,5 +1,6 @@
 import { useTheme } from "../context/ThemeContext";
 import "../styles/Navbar.css";
+import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 
 function Navbar() {
 
@@ -31,23 +32,26 @@ function Navbar() {
 
             <div className="right">
 
+                <div className="search-box">
+                <FaSearch />
                 <input
                     type="text"
                     placeholder="Search..."
-                />
+            />
+            </div>
 
                 <button
-                    // onClick={toggleTheme}
-                    className="theme-btn"
+                onClick={toggleTheme}
+                className="theme-btn"
                 >
-                    🌙
-                </button>
+            {darkMode ? <FaSun /> : 
+            <FaMoon />}
+            </button>
 
                 <button className="cart">
-
-                    🛒
-
-                </button>
+                <FaShoppingCart />
+                <span className="cart-count">0</span>
+            </button>
 
             </div>
 

@@ -59,3 +59,55 @@ body.dark{
   border-radius:20px;
   cursor:pointer;
 }
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:white;
+    padding:8px 15px;
+    border-radius:30px;
+}
+
+.search-box input{
+    border:none;
+    outline:none;
+    font-size:15px;
+    background:transparent;
+    width:160px;
+}
+
+.theme-btn,
+.cart{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    transition:.3s;
+    position:relative;
+}
+
+.theme-btn:hover,
+.cart:hover{
+    transform:scale(1.1);
+}
+
+.cart-count{
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    background:red;
+    color:white;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    font-weight:bold;
+}
