@@ -1,10 +1,12 @@
 import { useTheme } from "../context/ThemeContext";
 import "../styles/Navbar.css";
 import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
 
 function Navbar() {
 
     const { darkMode, toggleTheme } = useTheme();
+    const { cart } = useCart();
 
     return (
 
@@ -48,9 +50,11 @@ function Navbar() {
             <FaMoon />}
             </button>
 
-                <button className="cart">
-                <FaShoppingCart />
-                <span className="cart-count">0</span>
+            <button className="cart">
+            <FaShoppingCart />
+            <span className="cart-count">
+            {cart.length}
+            </span>
             </button>
 
             </div>
