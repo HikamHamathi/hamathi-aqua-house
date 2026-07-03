@@ -15,7 +15,7 @@ function ProductSection({ search }) {
 
       <div className="product-grid">
 
-        {filteredproducts.map((product) => (
+        {filteredProducts.map((product) => (
 
           <ProductCard
             key={product.id}
