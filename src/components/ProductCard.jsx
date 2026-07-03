@@ -1,5 +1,6 @@
 import "./ProductCard.css";
 import { useCart } from "../context/CartContext";
+import { useCart } from "../context/CartContext";
 
 function ProductCard({ id, image, name, price }) {
 
@@ -36,11 +37,18 @@ function ProductCard({ id, image, name, price }) {
       </p>
 
       <button
-        className="cart-btn"
-        onClick={handleAdd}
-      >
-        🛒 Add to Cart
-      </button>
+      className="cart-btn"
+      onClick={() =>
+    addToCart({
+      id,
+      image,
+      name,
+      price,
+    })
+  }
+>
+  🛒 Add to Cart
+</button>
 
     </div>
   );
