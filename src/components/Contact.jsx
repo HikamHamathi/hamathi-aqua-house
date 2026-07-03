@@ -19,7 +19,7 @@ function Contact() {
           <p>📧 hamathiaquahouse@gmail.com</p>
 
           <a
-            href="https://wa.me/9477XXXXXXX"
+            href="https://wa.me/94786767081"
             target="_blank"
             rel="noreferrer"
             className="whatsapp-btn"
