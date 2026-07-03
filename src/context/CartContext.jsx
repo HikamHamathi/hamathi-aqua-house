@@ -11,10 +11,10 @@ export function CartProvider({ children }) {
   const closeCart = () => setIsCartOpen(false);
 
   const addToCart = (product) => {
+    setCart((prev) => [...prev, product]);
+  };
   const removeFromCart = (id) => {
   setCart((prev) => prev.filter((item) => item.id !== id));
-};
-    setCart((prev) => [...prev, product]);
   };
 
   return (
