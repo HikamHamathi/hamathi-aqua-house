@@ -1,12 +1,27 @@
 import "./ProductCard.css";
+import { useCart } from "../context/CartContext";
 
-function ProductCard({ image, name, price }) {
+function ProductCard({ id, image, name, price }) {
+
+  const { addToCart } = useCart();
+
+  const handleAdd = () => {
+    addToCart({
+      id,
+      image,
+      name,
+      price
+    });
+  };
+
   return (
     <div className="product-card">
 
       <span className="badge">NEW</span>
 
-      <button className="wishlist">❤</button>
+      <button className="wishlist">
+        ❤
+      </button>
 
       <img src={image} alt={name} />
 
@@ -16,9 +31,14 @@ function ProductCard({ image, name, price }) {
         ⭐⭐⭐⭐⭐
       </div>
 
-      <p className="price">Rs. {price}</p>
+      <p className="price">
+        Rs. {price}
+      </p>
 
-      <button className="cart-btn">
+      <button
+        className="cart-btn"
+        onClick={handleAdd}
+      >
         🛒 Add to Cart
       </button>
 
