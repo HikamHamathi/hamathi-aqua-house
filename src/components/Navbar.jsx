@@ -2,6 +2,7 @@ import { useTheme } from "../context/ThemeContext";
 import "../styles/Navbar.css";
 import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
+import { useSearch } from "../context/SearchContext";
 
 function Navbar({
   search,
@@ -10,6 +11,7 @@ function Navbar({
 
     const { darkMode, toggleTheme } = useTheme();
     const { cart, openCart } = useCart();
+    const { search, setSearch } = useSearch();
 
     return (
 
@@ -38,15 +40,25 @@ function Navbar({
             <div className="right">
 
                 <div className="search-box">
-                <FaSearch />
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    value={search}
-                    onChange={(e) =>
-                setSearch(e.target.value)
-                }
+
+                <FaSearch
+                className="search-icon"
+                onClick={() => console.log("Searching:", search)}
                 />
+
+                <input
+                type="text"
+                placeholder="Search fish, plants, accessories..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                console.log("Searching:", search);
+                }
+                }}
+                />
+
+                </div>
             </div>
 
                 <button
