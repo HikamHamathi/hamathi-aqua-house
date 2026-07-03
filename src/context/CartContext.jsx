@@ -5,6 +5,10 @@ const CartContext = createContext();
 export function CartProvider({ children }) {
 
   const [cart, setCart] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
 
   const addToCart = (product) => {
     setCart((prev) => [...prev, product]);
@@ -15,6 +19,9 @@ export function CartProvider({ children }) {
       value={{
         cart,
         addToCart,
+        isCartOpen,
+        openCart,
+        closeCart,
       }}
     >
       {children}
