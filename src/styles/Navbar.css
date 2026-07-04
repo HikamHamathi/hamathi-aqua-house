@@ -29,7 +29,7 @@ body.dark{
   font-weight:bold;
 }
 
-.navbar ul{
+.nav-links{
   display:flex;
   list-style:none;
   gap:30px;
@@ -121,6 +121,10 @@ body.dark{
     cursor:pointer;
 }
 @media (max-width: 768px){
+
+    .navbar{
+    position:relative;
+    }
 
     .menu-btn{
         display:block;

@@ -13,8 +13,6 @@ import {
 import { useCart } from "../context/CartContext";
 import { useSearch } from "../context/SearchContext";
 import SearchSuggestions from "./SearchSuggestions";
-import { FaBars, FaTimes } from "react-icons/fa";
-// import { useState } from "react";
 
 function Navbar() {
 
