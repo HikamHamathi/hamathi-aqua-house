@@ -3,6 +3,7 @@ import "../styles/Navbar.css";
 import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 import { useSearch } from "../context/SearchContext";
+import SearchSuggestions from "./SearchSuggestions";
 
 function Navbar() {
 
@@ -62,7 +63,7 @@ function Navbar() {
                 }
                 }}
                 />
-                
+                <SearchSuggestions />
             </div>
 
                 <button
