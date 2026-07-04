@@ -56,13 +56,6 @@ function Navbar() {
                 placeholder="Search fish, plants, accessories..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                // onKeyDown={(e) => {
-                // if (e.key === "Enter") {
-                // alert("Enter pressed");
-                // handleSearch();
-                // }
-                // }}
-
                 onKeyDown={(e) => {
                 if (e.key === "Enter") {
                 handleSearch();
