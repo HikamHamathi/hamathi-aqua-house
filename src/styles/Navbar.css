@@ -150,7 +150,30 @@ body.dark{
     }
 
     .right{
-        gap:10px;
+    display:none;
+    }
+
+    .navbar{
+    padding:15px 20px;
+    justify-content:space-between;
+    }
+
+    .logo{
+    font-size:22px;
+    max-width:220px;
+    line-height:1.2;
+    }
+
+    .menu-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:45px;
+    height:45px;
+    font-size:26px;
+    color:white;
+    background:transparent;
+    border:none;
     }
 
     .search-box{
