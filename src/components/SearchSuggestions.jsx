@@ -46,10 +46,7 @@ function SearchSuggestions() {
         <div className="suggestion-info">
             <h4>{product.name}</h4>
             <p>Rs. {product.price}</p>
-        
-
-        </div>
-           <span className="fish-icon">🐠</span> {product.name}
+            </div>
           </div>
         ))
       )}
