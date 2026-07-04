@@ -94,7 +94,40 @@ function Navbar() {
             </button>
 
             </div>
+                <div className={menuOpen ? "mobile-actions active" : "mobile-actions"}>
 
+            <div className="mobile-search">
+                <FaSearch className="search-icon" />
+
+                <input
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                />
+            </div>
+
+            <button
+                onClick={toggleTheme}
+                className="theme-btn"
+            >
+                {darkMode ? <FaSun /> : <FaMoon />}
+            </button>
+
+            <button
+                className="cart"
+                onClick={() => {
+                openCart();
+                setMenuOpen(false);
+                }}
+            >
+                <FaShoppingCart />
+                <span className="cart-count">
+                {cart.length}
+                </span>
+            </button>
+
+            </div>
         </nav>
 
     )
