@@ -10,12 +10,12 @@ function Navbar() {
     const { cart, openCart } = useCart();
     const { search, setSearch } = useSearch();
     const handleSearch = () => {
-    const section = document.getElementById("products");
-    if (section) {
-    section.scrollIntoView({
-      behavior: "smooth"
-    });
-    }
+    document
+    .getElementById("products")
+    ?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+     });
     };
 
     return (
