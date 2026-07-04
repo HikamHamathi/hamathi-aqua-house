@@ -9,6 +9,14 @@ function Navbar() {
     const { darkMode, toggleTheme } = useTheme();
     const { cart, openCart } = useCart();
     const { search, setSearch } = useSearch();
+    const handleSearch = () => {
+    const section = document.getElementById("products");
+    if (section) {
+    section.scrollIntoView({
+      behavior: "smooth"
+    });
+    }
+    };
 
     return (
 
@@ -40,7 +48,7 @@ function Navbar() {
 
                 <FaSearch
                 className="search-icon"
-                onClick={() => console.log("Searching:", search)}
+                onClick={handleSearch}
                 />
 
                 <input
@@ -50,7 +58,7 @@ function Navbar() {
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                console.log("Searching:", search);
+                handleSearch();
                 }
                 }}
                 />

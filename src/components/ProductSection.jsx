@@ -11,7 +11,7 @@ function ProductSection({ search }) {
     .includes(search.toLowerCase())
     );
   return (
-    <section className="products">
+    <section className="products" id="products">
 
       <h2>Featured Products</h2>
 
