@@ -24,18 +24,31 @@ function SearchSuggestions() {
       ) : (
         results.map((product) => (
           <div
-            key={product.id}
-            className="suggestion-item"
-            onClick={() => {
-              setSearch(product.name);
+        key={product.id}
+        className="suggestion-item"
+        onClick={() => {
+            setSearch(product.name);
 
-              document
-                .getElementById("products")
-                ?.scrollIntoView({
-                  behavior: "smooth",
-                });
-            }}
-          >
+            document
+            .getElementById("products")
+            ?.scrollIntoView({
+                behavior: "smooth",
+            });
+        }}
+        >
+
+        <img
+            src={product.image}
+            alt={product.name}
+            className="suggestion-image"
+        />
+
+        <div className="suggestion-info">
+            <h4>{product.name}</h4>
+            <p>Rs. {product.price}</p>
+        
+
+        </div>
            <span className="fish-icon">🐠</span> {product.name}
           </div>
         ))

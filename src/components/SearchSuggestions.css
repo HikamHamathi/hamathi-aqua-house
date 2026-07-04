@@ -32,3 +32,33 @@
 .fish-icon{
     margin-right:10px;
 }
+.suggestion-item{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.suggestion-image{
+    width:55px;
+    height:55px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+.suggestion-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.suggestion-info h4{
+    margin:0;
+    font-size:15px;
+    color:#222;
+}
+
+.suggestion-info p{
+    margin:3px 0 0;
+    color:#0077b6;
+    font-weight:bold;
+    font-size:14px;
+}
