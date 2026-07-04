@@ -3,7 +3,7 @@ import "./ProductSection.css";
 import products from "../data/products";
 import { useSearch } from "../context/SearchContext";
 
-function ProductSection({ search }) {
+function ProductSection() {
   const { search } = useSearch();
   const filteredProducts = products.filter((product) =>
   product.name
