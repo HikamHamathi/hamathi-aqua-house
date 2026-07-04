@@ -8,9 +8,11 @@ function SearchSuggestions() {
 
   if (search.trim() === "") return null;
 
-  const results = products.filter((product) =>
+  const results = products
+  .filter(product =>
     product.name.toLowerCase().includes(search.toLowerCase())
-  );
+  )
+  .slice(0, 5);
 
   return (
     <div className="search-suggestions">
@@ -34,7 +36,7 @@ function SearchSuggestions() {
                 });
             }}
           >
-            🐠 {product.name}
+           <span className="fish-icon">🐠</span> {product.name}
           </div>
         ))
       )}
