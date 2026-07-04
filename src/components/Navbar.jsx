@@ -1,12 +1,24 @@
 import { useTheme } from "../context/ThemeContext";
 import "../styles/Navbar.css";
-import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
+import { useState } from "react";
+import {
+  FaShoppingCart,
+  FaMoon,
+  FaSun,
+  FaSearch,
+  FaBars,
+  FaTimes,
+} from "react-icons/fa";
+// import { FaShoppingCart, FaMoon, FaSun, FaSearch } from "react-icons/fa";
 import { useCart } from "../context/CartContext";
 import { useSearch } from "../context/SearchContext";
 import SearchSuggestions from "./SearchSuggestions";
+import { FaBars, FaTimes } from "react-icons/fa";
+// import { useState } from "react";
 
 function Navbar() {
 
+    const [menuOpen, setMenuOpen] = useState(false);
     const { darkMode, toggleTheme } = useTheme();
     const { cart, openCart } = useCart();
     const { search, setSearch } = useSearch();
@@ -28,18 +40,20 @@ function Navbar() {
                 🐠 Hamathi Aqua House
 
             </div>
+            <button
+            className="menu-btn"
+            onClick={() => setMenuOpen(!menuOpen)}
+            >
+            {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
 
-            <ul>
+            <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-                <li>Home</li>
-
-                <li>Fish</li>
-
-                <li>Accessories</li>
-
-                <li>Plants</li>
-
-                <li>Contact</li>
+                <li onClick={() => setMenuOpen(false)}>Home</li>
+                <li onClick={() => setMenuOpen(false)}>Fish</li>
+                <li onClick={() => setMenuOpen(false)}>Accessories</li>
+                <li onClick={() => setMenuOpen(false)}>Plants</li>
+                <li onClick={() => setMenuOpen(false)}>Contact</li>
 
             </ul>
 
