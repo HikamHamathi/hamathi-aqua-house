@@ -20,7 +20,12 @@ function Navbar() {
 
   const { darkMode, toggleTheme } = useTheme();
   const { cart, openCart } = useCart();
-  const { search, setSearch } = useSearch();
+  const {
+  search,
+  setSearch,
+  showSuggestions,
+  setShowSuggestions,
+  } = useSearch();
 
   const handleSearch = () => {
   document
@@ -29,11 +34,6 @@ function Navbar() {
       behavior: "smooth",
       block: "start",
       });
-
-      setTimeout(() => {
-        setSearch("");
-      }, 300);
-      setMenuOpen(false);
     };
 
   return (
@@ -71,11 +71,15 @@ function Navbar() {
             type="text"
             placeholder="Search fish, plants..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => {
+            setSearch(e.target.value);
+            setShowSuggestions(true);
+            }}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
-                handleSearch();
-              }
+              setShowSuggestions(false);
+              handleSearch();
+             }
             }}
           />
 

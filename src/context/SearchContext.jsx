@@ -4,6 +4,8 @@ const SearchContext = createContext();
 
 export function SearchProvider({ children }) {
 
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
   const [search, setSearch] = useState("");
 
   return (
@@ -11,6 +13,8 @@ export function SearchProvider({ children }) {
       value={{
         search,
         setSearch,
+        showSuggestions,
+        setShowSuggestions,
       }}
     >
       {children}

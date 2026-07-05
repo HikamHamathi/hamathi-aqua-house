@@ -4,9 +4,14 @@ import "./SearchSuggestions.css";
 
 function SearchSuggestions() {
 
-  const { search, setSearch } = useSearch();
+  const {
+  search,
+  setSearch,
+  showSuggestions,
+  setShowSuggestions,
+  } = useSearch();
 
-  if (search.trim() === "") return null;
+  if (!showSuggestions || search.trim() === "") return null;
 
   const results = products
   .filter(product =>
@@ -27,17 +32,14 @@ function SearchSuggestions() {
         key={product.id}
         className="suggestion-item"
         onClick={() => {
-            setSearch(product.name);
+        setSearch(product.name);
+        setShowSuggestions(false);
 
-            document
-              .getElementById("products")
-              ?.scrollIntoView({
-                  behavior: "smooth",
-              });
-
-            setTimeout(() => {
-                setSearch("");
-            }, 300);
+        document
+          .getElementById("products")
+          ?.scrollIntoView({
+              behavior: "smooth",
+          });
         }}
         >
 
