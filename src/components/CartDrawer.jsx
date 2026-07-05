@@ -12,7 +12,10 @@ function CartDrawer() {
 
   if (!isCartOpen) return null;
 
-  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const total = cart.reduce(
+  (sum, item) => sum + item.price * item.quantity,
+  0
+  );
 
   return (
     <div className="cart-drawer">
@@ -36,11 +39,19 @@ function CartDrawer() {
 
               <img src={item.image} alt={item.name} />
 
-              <div>
+              <div className="cart-info">
 
-                <h4>{item.name}</h4>
+              <h4>{item.name}</h4>
 
-                <p>Rs. {item.price}</p>
+              <p>Rs. {item.price}</p>
+
+              <p>
+                Quantity: <strong>{item.quantity}</strong>
+              </p>
+
+              <p>
+                Subtotal: <strong>Rs. {item.price * item.quantity}</strong>
+              </p>
 
               </div>
               <button
