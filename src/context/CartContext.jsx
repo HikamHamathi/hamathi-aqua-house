@@ -24,8 +24,6 @@ export function CartProvider({ children }) {
 
     return [...prev, { ...product, quantity: 1 }];
   });
-
-  setIsCartOpen(true);
   };
   const removeFromCart = (id) => {
   setCart((prev) => prev.filter((item) => item.id !== id));
