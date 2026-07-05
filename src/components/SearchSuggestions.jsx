@@ -30,10 +30,14 @@ function SearchSuggestions() {
             setSearch(product.name);
 
             document
-            .getElementById("products")
-            ?.scrollIntoView({
-                behavior: "smooth",
-            });
+              .getElementById("products")
+              ?.scrollIntoView({
+                  behavior: "smooth",
+              });
+
+            setTimeout(() => {
+                setSearch("");
+            }, 300);
         }}
         >
 

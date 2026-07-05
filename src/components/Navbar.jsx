@@ -23,15 +23,17 @@ function Navbar() {
   const { search, setSearch } = useSearch();
 
   const handleSearch = () => {
-    document
-      .getElementById("products")
-      ?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
+  document
+    .getElementById("products")
+    ?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
       });
 
-    setMenuOpen(false);
-  };
+      setTimeout(() => {
+        setSearch("");
+      }, 300);
+    };
 
   return (
     <nav className="navbar">
