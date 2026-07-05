@@ -33,6 +33,7 @@ function Navbar() {
       setTimeout(() => {
         setSearch("");
       }, 300);
+      setMenuOpen(false);
     };
 
   return (
