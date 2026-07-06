@@ -5,8 +5,11 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import CartDrawer from "../components/CartDrawer";
+import { useState } from "react";
+import Checkout from "../components/Checkout";
 
 function Home({ search, setSearch }) {
+  const [showCheckout, setShowCheckout] = useState(false);
   return (
     <>
       <Navbar 
@@ -20,8 +23,11 @@ function Home({ search, setSearch }) {
         <Features />
         <Testimonials />
         <Contact />
-        <CartDrawer />
-        <footer />
+        <CartDrawer setShowCheckout={setShowCheckout} />
+        {showCheckout && (
+        <Checkout />
+      )}
+        <footer />0
     </>
   );
 }

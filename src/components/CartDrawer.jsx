@@ -1,7 +1,7 @@
 import "./CartDrawer.css";
 import { useCart } from "../context/CartContext";
 
-function CartDrawer() {
+function CartDrawer({ setShowCheckout }) {
 
   const {
   cart,
@@ -67,8 +67,14 @@ function CartDrawer() {
 
           <h3>Total: Rs. {total}</h3>
 
-          <button className="checkout-btn">
-            Checkout
+          <button
+          className="checkout-btn"
+          onClick={() => {
+            closeCart();
+            setShowCheckout(true);
+          }}
+          >
+          Checkout
           </button>
 
         </>
