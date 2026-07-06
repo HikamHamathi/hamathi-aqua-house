@@ -15,6 +15,40 @@ function Checkout() {
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+  
+  const sendWhatsApp = () => {
+
+  if (!name || !phone || !address) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  let message = `🐠 *Hamathi Aqua House Order*%0A%0A`;
+
+  message += `👤 Name: ${name}%0A`;
+  message += `📞 Mobile: ${phone}%0A`;
+  message += `🏠 Address: ${address}%0A`;
+
+  if (note.trim() !== "") {
+    message += `📝 Note: ${note}%0A`;
+  }
+
+  message += `%0A🛒 *Order Items*%0A`;
+
+  cart.forEach((item) => {
+    message += `• ${item.name}%0A`;
+    message += `   Qty: ${item.quantity}%0A`;
+    message += `   Price: Rs. ${item.price}%0A`;
+    message += `   Subtotal: Rs. ${item.price * item.quantity}%0A%0A`;
+  });
+
+  message += `💰 *Total: Rs. ${total}*`;
+
+  window.open(
+    `https://wa.me/94786767081?text=${message}`,
+    "_blank"
+  );
+};
 
   return (
     <div className="checkout">
@@ -66,9 +100,12 @@ function Checkout() {
 
       <h2>Total : Rs. {total}</h2>
 
-      <button className="whatsapp-btn">
+      <button
+        className="whatsapp-btn"
+        onClick={sendWhatsApp}
+        >
         Place Order via WhatsApp
-      </button>
+        </button>
 
     </div>
   );
