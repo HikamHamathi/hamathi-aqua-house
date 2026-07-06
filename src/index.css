@@ -15,3 +15,41 @@ body{
   font-family:Arial, Helvetica, sans-serif;
   overflow-x:hidden;
 }
+body.dark{
+  background:#111827;
+  color:white;
+  transition:0.3s;
+}
+
+body.dark .navbar{
+  background:#0f172a;
+}
+
+body.dark .product-section{
+  background:#111827;
+}
+
+body.dark .product-card{
+  background:#1f2937;
+  color:white;
+}
+
+body.dark .features{
+  background:#111827;
+  color:white;
+}
+
+body.dark .testimonials{
+  background:#111827;
+  color:white;
+}
+
+body.dark .contact{
+  background:#111827;
+  color:white;
+}
+
+body.dark .checkout{
+  background:#1f2937;
+  color:white;
+}
