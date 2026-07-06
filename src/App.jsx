@@ -1,17 +1,27 @@
-import Home from "./pages/Home";
 import { useState } from "react";
+import Home from "./pages/Home";
 import Checkout from "./components/Checkout";
 
 function App() {
 
   const [search, setSearch] = useState("");
   const [showCheckout, setShowCheckout] = useState(false);
+
   return (
     <>
-      <Home
-        search={search}
-        setSearch={setSearch}
-      />
+      {!showCheckout ? (
+
+        <Home
+          search={search}
+          setSearch={setSearch}
+          setShowCheckout={setShowCheckout}
+        />
+
+      ) : (
+
+        <Checkout />
+
+      )}
     </>
   );
 }
