@@ -53,3 +53,89 @@ body.dark .checkout{
   background:#1f2937;
   color:white;
 }
+/* ===========================
+   DARK MODE
+=========================== */
+
+body.dark{
+    background:#0f172a;
+    color:#f8fafc;
+}
+
+/* White Sections */
+body.dark .product-section,
+body.dark .features,
+body.dark .testimonials,
+body.dark .contact-section{
+    background:#0f172a;
+}
+
+/* Cards */
+body.dark .product-card,
+body.dark .feature-card,
+body.dark .testimonial-card,
+body.dark .contact-card,
+body.dark .checkout,
+body.dark .cart-drawer{
+    background:#1e293b;
+    color:#ffffff;
+    border:1px solid #334155;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Headings */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5{
+    color:#60a5fa;
+}
+
+/* Paragraphs */
+body.dark p,
+body.dark span,
+body.dark li{
+    color:#e2e8f0;
+}
+
+/* Inputs */
+body.dark input,
+body.dark textarea{
+    background:#111827;
+    color:#fff;
+    border:1px solid #374151;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+    color:#94a3b8;
+}
+
+/* Buttons */
+body.dark .theme-btn,
+body.dark .cart{
+    background:#1e293b;
+    color:white;
+}
+
+/* Navbar Search */
+body.dark .search-box{
+    background:#1e293b;
+}
+
+body.dark .search-box input{
+    color:white;
+}
+
+/* Contact Icons */
+body.dark .contact-card i,
+body.dark .contact-card svg{
+    color:#22c55e;
+}
+
+/* Footer */
+body.dark footer{
+    background:#020617;
+    color:white;
+}

@@ -50,3 +50,19 @@
     border:none;
     border-radius:20px;
 }
+.contact-text{
+    color:#374151;
+}
+
+body.dark .contact-text{
+    color:#f1f5f9;
+}
+body.dark .contact-card{
+    background:#1e293b;
+}
+
+body.dark .contact-card p,
+body.dark .contact-card span,
+body.dark .contact-card a{
+    color:#e2e8f0;
+}

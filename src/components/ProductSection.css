@@ -15,3 +15,10 @@
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:30px;
 }
+body.dark .product-section{
+    background:#0f172a;
+}
+
+body.dark .products-container{
+    background:#0f172a;
+}

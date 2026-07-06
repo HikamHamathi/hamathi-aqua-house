@@ -12,11 +12,25 @@ function Contact() {
 
           <h3>Hamathi Aqua House</h3>
 
+           <p className="contact-text">
+            Colombo, Sri Lanka
+          </p>
+
+          <p className="contact-text">
+            +94 77 1234567
+          </p>
+
+          <p className="contact-text">
+            info@hamathiaqua.com
+          </p>
+
           <p>📍 Sri Lanka</p>
 
           <p>📞 +94 78 676 7081</p>
 
           <p>📧 hamathiaquahouse@gmail.com</p>
+
+         
 
           <a
             href="https://wa.me/94786767081"

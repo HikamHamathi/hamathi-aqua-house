@@ -199,3 +199,19 @@ body.dark{
         flex-shrink:0;
     }
 }
+body.dark .search-box{
+    background:#1e293b;
+    border:1px solid #334155;
+}
+
+body.dark .search-box input{
+    color:#ffffff;
+}
+
+body.dark .search-box input::placeholder{
+    color:#94a3b8;
+}
+
+body.dark .search-icon{
+    color:#cbd5e1;
+}
