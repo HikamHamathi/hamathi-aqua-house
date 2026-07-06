@@ -18,7 +18,10 @@ import "../styles/Navbar.css";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const { darkMode, toggleTheme } = useTheme();
+  const handleTheme = () => {
+  console.log("Theme Button Clicked");
+  toggleTheme();
+};
   const { cart, openCart } = useCart();
   const {
   search,
@@ -98,10 +101,10 @@ function Navbar() {
         </button>
 
         <button
-          className="theme-btn"
-          onClick={toggleTheme}
+        className="theme-btn"
+        onClick={handleTheme}
         >
-          {darkMode ? <FaSun /> : <FaMoon />}
+        {darkMode ? <FaSun /> : <FaMoon />}
         </button>
 
       </div>
