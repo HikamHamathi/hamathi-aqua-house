@@ -19,11 +19,11 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { darkMode, toggleTheme } = useTheme();
 
-  console.log("darkMode:", darkMode);
-  console.log("toggleTheme:", toggleTheme);
+  // console.log("darkMode:", darkMode);
+  // console.log("toggleTheme:", toggleTheme);
 
   const handleTheme = () => {
-  console.log("Theme Button Clicked");
+  // console.log("Theme Button Clicked");
   toggleTheme();
 };
   const { cart, openCart } = useCart();
