@@ -1,4 +1,6 @@
 import Home from "./pages/Home";
+import { useState } from "react";
+import Checkout from "./components/Checkout";
 
 function App() {
 
