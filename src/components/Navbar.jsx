@@ -102,10 +102,17 @@ function Navbar() {
 
         <button
         className="theme-btn"
+        onClick={() => alert("Clicked")}
+        >
+        🌙
+        </button>
+
+        {/* <button
+        className="theme-btn"
         onClick={handleTheme}
         >
         {darkMode ? <FaSun /> : <FaMoon />}
-        </button>
+        </button> */}
 
       </div>
 
