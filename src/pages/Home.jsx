@@ -27,7 +27,7 @@ function Home({ search, setSearch }) {
         {showCheckout && (
         <Checkout />
       )}
-        <footer />0
+        <footer />
     </>
   );
 }
