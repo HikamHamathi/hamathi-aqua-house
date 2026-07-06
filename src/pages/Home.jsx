@@ -5,7 +5,7 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Contact from "../components/Contact";
 import CartDrawer from "../components/CartDrawer";
-// import { useState } from "react";
+import { useState } from "react";
 // import Checkout from "../components/Checkout";
 
 function Home({ search, setSearch }) {
