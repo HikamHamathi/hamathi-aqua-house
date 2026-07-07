@@ -9,19 +9,11 @@ function App() {
 
   return (
     <>
-      {!showCheckout ? (
-
-        <Home
-          search={search}
-          setSearch={setSearch}
-          setShowCheckout={setShowCheckout}
-        />
-
-      ) : (
-
-        <Checkout />
-
-      )}
+      {showCheckout ? (
+  <Checkout setShowCheckout={setShowCheckout} />
+) : (
+  <Home setShowCheckout={setShowCheckout} />
+)}
     </>
   );
 }

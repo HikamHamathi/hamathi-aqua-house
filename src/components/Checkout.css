@@ -99,3 +99,19 @@ opacity:.9;
 .checkout-header p{
     color:#cbd5e1;
 }
+.back-btn{
+    width:100%;
+    margin-top:15px;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background:#334155;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#475569;
+}

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import "./Checkout.css";
 
-function Checkout() {
+function Checkout({ setShowCheckout }) {
 
   const { cart } = useCart();
 
@@ -24,17 +24,24 @@ function Checkout() {
   
   const sendWhatsApp = () => {
 
-  if (!name || !phone || !address) {
-    alert("Please fill all required fields.");
-    return;
-  }
+      if (!name || !phone) {
+      alert("Please fill all required fields.");
+      return;
+    }
+
+    if (delivery === "Delivery" && !address) {
+      alert("Please enter your delivery address.");
+      return;
+    }
 
   let message = `🐠 *Hamathi Aqua House Order*%0A%0A`;
 
   message += `👤 Name: ${name}%0A`;
   message += `📞 Mobile: ${phone}%0A`;
   message += `🚚 Option : ${delivery}%0A`;
+  if (delivery === "Delivery") {
   message += `🏠 Address: ${address}%0A`;
+  }
 
   if (note.trim() !== "") {
     message += `📝 Note: ${note}%0A`;
@@ -116,36 +123,42 @@ function Checkout() {
 
       <label>
 
-      <input
-      type="radio"
-      value="Delivery"
-      checked={delivery==="Delivery"}
-      onChange={(e)=>setDelivery(e.target.value)}
-      />
+        <input
+          type="radio"
+          name="deliveryOption"
+          value="Delivery"
+          checked={delivery === "Delivery"}
+          onChange={(e)=>setDelivery(e.target.value)}
+        />
 
-      Delivery
+        Delivery
 
       </label>
 
       <label>
 
-      <input
-      type="radio"
-      value="Pickup"
-      checked={delivery==="Pickup"}
-      onChange={(e)=>setDelivery(e.target.value)}
-      />
+        <input
+          type="radio"
+          name="deliveryOption"
+          value="Pickup"
+          checked={delivery === "Pickup"}
+          onChange={(e)=>setDelivery(e.target.value)}
+        />
 
-      Pickup
+        Pickup
 
       </label>
 
-      </div>
-      <textarea 
+    </div>
+      {delivery === "Delivery" && (
+
+      <textarea
         placeholder="Delivery Address"
         value={address}
         onChange={(e)=>setAddress(e.target.value)}
       />
+
+      )}
 
       <textarea
         placeholder="Order Note (Optional)"
@@ -177,6 +190,12 @@ function Checkout() {
         onClick={sendWhatsApp}
         >
         Place Order via WhatsApp
+        </button>
+        <button
+          className="back-btn"
+          onClick={() => setShowCheckout(false)}
+        >
+          ← Back to Shopping
         </button>
 
     </div>
