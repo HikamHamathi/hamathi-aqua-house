@@ -139,3 +139,12 @@ body.dark footer{
     background:#020617;
     color:white;
 }
+/* Dark Sections */
+
+body.dark .product-section,
+body.dark .features,
+body.dark .testimonials,
+body.dark .contact,
+body.dark footer{
+    background:#0f172a;
+}

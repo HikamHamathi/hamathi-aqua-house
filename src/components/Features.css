@@ -42,3 +42,7 @@
     color:#555;
     line-height:1.6;
 }
+body.dark .feature-card{
+    background:#1e293b;
+    color:white;
+}

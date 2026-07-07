@@ -44,3 +44,7 @@
     color:#0077b6;
     font-weight:bold;
 }
+body.dark .testimonial-card{
+    background:#1e293b;
+    color:white;
+}

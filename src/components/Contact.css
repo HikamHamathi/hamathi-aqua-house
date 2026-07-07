@@ -66,3 +66,23 @@ body.dark .contact-card span,
 body.dark .contact-card a{
     color:#e2e8f0;
 }
+/* Dark Contact Card */
+
+body.dark .contact-card{
+    background:#1e293b;
+    border:1px solid #334155;
+}
+
+body.dark .contact-card h3{
+    color:#60a5fa;
+}
+
+body.dark .contact-card p,
+body.dark .contact-card span,
+body.dark .contact-card a{
+    color:#e2e8f0;
+}
+
+body.dark .contact-card svg{
+    color:#22c55e;
+}
