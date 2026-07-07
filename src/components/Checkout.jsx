@@ -112,7 +112,7 @@ function Checkout() {
         value={phone}
         onChange={(e)=>setPhone(e.target.value)}
       />
-      <div className="delivery-option">
+      <div className="delivery-options">
 
       <label>
 
@@ -139,6 +139,7 @@ function Checkout() {
       Pickup
 
       </label>
+
       </div>
       <textarea 
         placeholder="Delivery Address"
