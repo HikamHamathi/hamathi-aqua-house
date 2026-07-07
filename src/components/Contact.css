@@ -86,3 +86,33 @@ body.dark .contact-card a{
 body.dark .contact-card svg{
     color:#22c55e;
 }
+/* =========================
+   DARK MODE CONTACT
+========================= */
+
+body.dark .contact{
+    background:#0f172a;
+}
+
+body.dark .contact h2{
+    color:#60a5fa;
+}
+
+body.dark .contact-info{
+    background:#1e293b;
+    border:1px solid #334155;
+}
+
+body.dark .contact-info h3{
+    color:#60a5fa;
+}
+
+body.dark .contact-info p,
+body.dark .contact-info .contact-text{
+    color:#f8fafc;
+}
+
+body.dark .whatsapp-btn{
+    background:#22c55e;
+    color:white;
+}

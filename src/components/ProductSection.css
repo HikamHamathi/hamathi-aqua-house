@@ -22,3 +22,14 @@ body.dark .product-section{
 body.dark .products-container{
     background:#0f172a;
 }
+/* =========================
+   DARK MODE PRODUCTS
+========================= */
+
+body.dark .products{
+    background:#0f172a;
+}
+
+body.dark .products h2{
+    color:#60a5fa;
+}
