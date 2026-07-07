@@ -65,3 +65,32 @@
     font-weight:bold;
     font-size:13px;
 }
+/* ===========================
+   DARK MODE SEARCH SUGGESTIONS
+=========================== */
+
+body.dark .search-suggestions{
+    background:#1e293b;
+    border:1px solid #334155;
+    box-shadow:0 8px 25px rgba(0,0,0,.4);
+}
+
+body.dark .suggestion-item{
+    border-bottom:1px solid #334155;
+}
+
+body.dark .suggestion-item:hover{
+    background:#334155;
+}
+
+body.dark .suggestion-info h4{
+    color:#f8fafc;
+}
+
+body.dark .suggestion-info p{
+    color:#60a5fa;
+}
+body.dark .suggestion-item:hover h4,
+body.dark .suggestion-item:hover p{
+    color:#ffffff;
+}

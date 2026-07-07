@@ -63,3 +63,37 @@ margin-top:25px;
 opacity:.9;
 
 }
+.delivery-option{
+    display:flex;
+    gap:30px;
+    margin:20px 0;
+}
+
+.delivery-option label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.delivery-option input[type="radio"]{
+    accent-color:#22c55e;
+    transform:scale(1.2);
+}
+.checkout-header{
+    text-align:center;
+    margin-bottom:25px;
+    padding-bottom:20px;
+    border-bottom:1px solid #334155;
+}
+
+.checkout-header h1{
+    color:#60a5fa;
+    font-size:34px;
+    margin-bottom:6px;
+}
+
+.checkout-header p{
+    color:#cbd5e1;
+}

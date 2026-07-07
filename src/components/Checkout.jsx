@@ -10,6 +10,12 @@ function Checkout() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [note, setNote] = useState("");
+  const [delivery, setDelivery] = useState("Delivery");
+  const orderId =
+  "HAH-" +
+  Date.now().toString().slice(-6);
+  const orderDate =
+  new Date().toLocaleString();
 
   const total = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -27,6 +33,7 @@ function Checkout() {
 
   message += `👤 Name: ${name}%0A`;
   message += `📞 Mobile: ${phone}%0A`;
+  message += `🚚 Option : ${delivery}%0A`;
   message += `🏠 Address: ${address}%0A`;
 
   if (note.trim() !== "") {
@@ -52,9 +59,46 @@ function Checkout() {
 
   return (
     <div className="checkout">
+      <div className="checkout-header">
 
       <h2>Checkout</h2>
 
+      {/* <img
+        src="/logo.png"
+        alt="Hamathi Aqua House"
+        className="checkout-logo"
+      /> */}
+
+      <div>
+
+        <h1>Hamathi Aqua House</h1>
+
+        <p>Premium Aquarium Fish & Accessories
+
+        </p>
+
+      </div>
+
+    </div>
+      <div className="order-details">
+
+          <p>
+
+              <strong>Order ID :</strong>
+
+              {orderId}
+
+          </p>
+
+          <p>
+
+              <strong>Date :</strong>
+
+              {orderDate}
+
+          </p>
+
+      </div>
       <input
         type="text"
         placeholder="Full Name"
@@ -68,8 +112,35 @@ function Checkout() {
         value={phone}
         onChange={(e)=>setPhone(e.target.value)}
       />
+      <div className="delivery-option">
 
-      <textarea
+      <label>
+
+      <input
+      type="radio"
+      value="Delivery"
+      checked={delivery==="Delivery"}
+      onChange={(e)=>setDelivery(e.target.value)}
+      />
+
+      Delivery
+
+      </label>
+
+      <label>
+
+      <input
+      type="radio"
+      value="Pickup"
+      checked={delivery==="Pickup"}
+      onChange={(e)=>setDelivery(e.target.value)}
+      />
+
+      Pickup
+
+      </label>
+      </div>
+      <textarea 
         placeholder="Delivery Address"
         value={address}
         onChange={(e)=>setAddress(e.target.value)}

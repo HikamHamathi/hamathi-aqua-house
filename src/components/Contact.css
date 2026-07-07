@@ -61,29 +61,29 @@ body.dark .contact-card{
     background:#1e293b;
 }
 
-body.dark .contact-card p,
-body.dark .contact-card span,
-body.dark .contact-card a{
+body.dark .contact-info p,
+body.dark .contact-info span,
+body.dark .contact-info a{
     color:#e2e8f0;
 }
 /* Dark Contact Card */
 
-body.dark .contact-card{
+body.dark .contact-info{
     background:#1e293b;
     border:1px solid #334155;
 }
 
-body.dark .contact-card h3{
+body.dark .contact-info h3{
     color:#60a5fa;
 }
 
-body.dark .contact-card p,
-body.dark .contact-card span,
-body.dark .contact-card a{
+body.dark .contact-info p,
+body.dark .contact-info span,
+body.dark .contact-info a{
     color:#e2e8f0;
 }
 
-body.dark .contact-card svg{
+body.dark .contact-info svg{
     color:#22c55e;
 }
 /* =========================
