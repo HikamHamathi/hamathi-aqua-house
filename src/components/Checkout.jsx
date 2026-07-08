@@ -4,7 +4,7 @@ import "./Checkout.css";
 
 function Checkout({ setShowCheckout }) {
 
-  const { cart } = useCart();
+  const { cart, clearCart } = useCart();
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -61,6 +61,12 @@ function Checkout({ setShowCheckout }) {
   window.open(
     `https://wa.me/94786767081?text=${message}`,
     "_blank"
+  );
+  clearCart();
+
+  // alert("✅ Your order has been sent successfully!");
+  alert(
+  "🎉 Thank you!\n\nYour order has been sent successfully.\nHamathi Aqua House will contact you soon."
   );
 };
 
@@ -195,7 +201,7 @@ function Checkout({ setShowCheckout }) {
           className="back-btn"
           onClick={() => setShowCheckout(false)}
         >
-          ← Back to Shopping
+           Back to Shopping
         </button>
 
     </div>

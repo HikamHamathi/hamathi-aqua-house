@@ -6,6 +6,9 @@ export function CartProvider({ children }) {
 
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const clearCart = () => {
+  setCart([]);
+  };
 
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
@@ -38,6 +41,7 @@ export function CartProvider({ children }) {
         isCartOpen,
         openCart,
         closeCart,
+        clearCart,
       }}
     >
       {children}
