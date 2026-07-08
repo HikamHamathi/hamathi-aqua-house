@@ -294,3 +294,43 @@ body.dark .navbar{
     backdrop-filter:blur(15px);
     -webkit-backdrop-filter:blur(15px);
 }
+.wishlist-nav{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    position:relative;
+    font-size:18px;
+    color:#ff1744;
+    transition:.3s;
+}
+
+.wishlist-nav:hover{
+    transform:scale(1.08);
+}
+
+.wishlist-count{
+    position:absolute;
+    top:-5px;
+    right:-5px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#ff1744;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:11px;
+    font-weight:bold;
+}
+
+body.dark .wishlist-nav{
+    background:#1e293b;
+    color:#ff4d6d;
+}

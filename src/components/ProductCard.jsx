@@ -1,9 +1,15 @@
 import "./ProductCard.css";
 import { useCart } from "../context/CartContext";
+import { FaHeart } from "react-icons/fa";
+import { useWishlist } from "../context/WishlistContext";
 
 function ProductCard({ id, image, name, price }) {
 
   const { addToCart } = useCart();
+
+  const { wishlist, toggleWishlist } = useWishlist();
+
+  const isFavourite = wishlist.includes(id);
 
 const handleAdd = () => {
   addToCart({
@@ -19,9 +25,22 @@ const handleAdd = () => {
 
       <span className="badge">NEW</span>
 
-      <button className="wishlist">
-        ❤
+      <button
+        className={`wishlist ${isFavourite ? "active" : ""}`}
+        onClick={() => {
+          console.log("Clicked", id);
+          toggleWishlist(id);
+        }}
+      >
+        <FaHeart />
       </button>
+
+      {/* <button
+        className={`wishlist ${isFavourite ? "active" : ""}`}
+        onClick={() => toggleWishlist(id)}
+      >
+        <FaHeart />
+      </button> */}
 
       <img src={image} alt={name} />
 

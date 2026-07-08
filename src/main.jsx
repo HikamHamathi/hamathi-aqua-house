@@ -4,11 +4,13 @@ import { CartProvider } from "./context/CartContext";
 import { SearchProvider } from "./context/SearchContext";
 import "./index.css";
 import "./App.css";
-import { WishlistProvider } from "./context/WishlistContext";
+
 
 import App from "./App";
 
 import { ThemeProvider } from "./context/ThemeContext";
+
+import { WishlistProvider } from "./context/WishlistContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 

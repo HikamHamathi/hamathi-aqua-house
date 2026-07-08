@@ -6,6 +6,7 @@ import {
   FaSearch,
   FaBars,
   FaTimes,
+  FaHeart,
 } from "react-icons/fa";
 
 import { useTheme } from "../context/ThemeContext";
@@ -14,10 +15,17 @@ import { useSearch } from "../context/SearchContext";
 
 import SearchSuggestions from "./SearchSuggestions";
 import "../styles/Navbar.css";
+import { useWishlist } from "../context/WishlistContext";
+
+import WishlistDrawer from "./WishlistDrawer";
 
 function Navbar() {
+  const { wishlist } = useWishlist();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [wishlistOpen, setWishlistOpen] = useState(false);
   const { darkMode, toggleTheme } = useTheme();
+
+
 
   // console.log("darkMode:", darkMode);
   // console.log("toggleTheme:", toggleTheme);
@@ -44,6 +52,7 @@ function Navbar() {
     };
 
   return (
+    <>
     <nav className="navbar">
 
       <div className="logo">
@@ -105,6 +114,18 @@ function Navbar() {
         </button>
 
         <button
+        className="wishlist-nav"
+        onClick={() => setWishlistOpen(true)}
+        >
+        <FaHeart />
+        {wishlist.length > 0 && (
+          <span className="wishlist-count">
+            {wishlist.length}
+          </span>
+        )}
+      </button>
+
+        <button
         className="theme-btn"
         onClick={handleTheme}
         >
@@ -119,8 +140,14 @@ function Navbar() {
         </button> */}
 
       </div>
-
     </nav>
+
+    <WishlistDrawer
+      open={wishlistOpen}
+      onClose={() => setWishlistOpen(false)}
+    />
+  </>
+
   );
 }
 

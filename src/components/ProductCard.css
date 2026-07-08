@@ -118,16 +118,21 @@ body.dark .product-card{
     justify-content:center;
     align-items:center;
     cursor:pointer;
-    transition:.3s;
+    /* transition:.3s; */
+    transition: all .3s ease;
 }
 
 .wishlist:hover{
-    transform:scale(1.1);
+    /* transform:scale(1.1); */
+    transform: scale(1.15);
 }
 
 .wishlist.active{
     background:#ff1744;
-    color:white;
+    /* color:white; */
+    color:#fff;
+    transform:scale(1.1);
+    box-shadow:0 0 15px rgba(255,23,68,.5);
 }
 
 body.dark .wishlist{
