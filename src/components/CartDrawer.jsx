@@ -8,7 +8,9 @@ function CartDrawer({ setShowCheckout }) {
   isCartOpen,
   closeCart,
   removeFromCart,
-} = useCart();
+  increaseQuantity,
+  decreaseQuantity,
+  } = useCart();
 
   if (!isCartOpen) return null;
 
@@ -45,9 +47,27 @@ function CartDrawer({ setShowCheckout }) {
 
               <p>Rs. {item.price}</p>
 
-              <p>
-                Quantity: <strong>{item.quantity}</strong>
-              </p>
+              <div className="quantity-controls">
+
+              <button
+                className="qty-btn"
+                onClick={() => decreaseQuantity(item.id)}
+              >
+                −
+              </button>
+
+              <span className="qty-value">
+                {item.quantity}
+              </span>
+
+              <button
+                className="qty-btn"
+                onClick={() => increaseQuantity(item.id)}
+              >
+                +
+              </button>
+
+            </div>
 
               <p>
                 Subtotal: <strong>Rs. {item.price * item.quantity}</strong>

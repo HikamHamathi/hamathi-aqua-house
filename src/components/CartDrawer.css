@@ -76,3 +76,42 @@
 .delete-btn:hover{
     transform:scale(1.15);
 }
+.quantity-controls{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin:10px 0;
+}
+
+.qty-btn{
+    width:34px;
+    height:34px;
+    border:none;
+    border-radius:50%;
+    background:#0077b6;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.qty-btn:hover{
+    background:#005f8d;
+    transform:scale(1.08);
+}
+
+.qty-value{
+    min-width:24px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+body.dark .qty-btn{
+    background:#2563eb;
+}
+
+body.dark .qty-btn:hover{
+    background:#1d4ed8;
+}
