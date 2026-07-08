@@ -2,6 +2,7 @@ import "./ProductCard.css";
 import { useCart } from "../context/CartContext";
 import { FaHeart } from "react-icons/fa";
 import { useWishlist } from "../context/WishlistContext";
+import { FaShoppingCart } from "react-icons/fa";
 
 function ProductCard({ id, image, name, price }) {
 
@@ -57,8 +58,9 @@ const handleAdd = () => {
     <button
       className="cart-btn"
       onClick={handleAdd}
-      >
-    🛒 Add to Cart
+    >
+      <FaShoppingCart className="cart-icon" />
+      <span>Add to Cart</span>
     </button>
 
     </div>
