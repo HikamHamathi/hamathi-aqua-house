@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import "./Checkout.css";
+// import { useNavigate } from "react-router-dom";
 
 function Checkout({ setShowCheckout }) {
 
   const { cart, clearCart } = useCart();
+  // const navigate = useNavigate();
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -65,9 +68,7 @@ function Checkout({ setShowCheckout }) {
   clearCart();
 
   // alert("✅ Your order has been sent successfully!");
-  alert(
-  "🎉 Thank you!\n\nYour order has been sent successfully.\nHamathi Aqua House will contact you soon."
-  );
+  setShowSuccess(true);
 };
 
   return (
@@ -203,6 +204,40 @@ function Checkout({ setShowCheckout }) {
         >
            Back to Shopping
         </button>
+
+              {showSuccess && (
+        <div className="success-overlay">
+          <div className="success-modal">
+
+            <div className="success-icon">✅</div>
+
+            <h2>Order Placed Successfully!</h2>
+
+            <p>
+              Thank you for shopping with
+              <br />
+              🐠 <strong>Hamathi Aqua House</strong>
+            </p>
+
+            <p>Your order has been received successfully.</p>
+
+            <p>📞 We will contact you shortly to confirm your order.</p>
+
+            <p>We appreciate your trust in us.</p>
+
+            <button
+              className="continue-btn"
+              onClick={() => {
+                setShowSuccess(false);
+                window.location.href = "/";
+              }}
+            >
+              Continue Shopping
+            </button>
+
+          </div>
+        </div>
+      )}
 
     </div>
   );

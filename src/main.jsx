@@ -4,6 +4,7 @@ import { CartProvider } from "./context/CartContext";
 import { SearchProvider } from "./context/SearchContext";
 import "./index.css";
 import "./App.css";
+import { WishlistProvider } from "./context/WishlistContext";
 
 import App from "./App";
 
@@ -15,6 +16,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 <ThemeProvider>
 
+<WishlistProvider>
+
 <SearchProvider>
 
 <CartProvider>
@@ -24,6 +27,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 </CartProvider>
 
 </SearchProvider>
+
+</WishlistProvider>
 
 </ThemeProvider>
 

@@ -104,3 +104,38 @@ body.dark .product-card{
 body.dark .product-card{
     box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
+.wishlist{
+    position:absolute;
+    top:15px;
+    right:15px;
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:white;
+    color:#bbb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.wishlist:hover{
+    transform:scale(1.1);
+}
+
+.wishlist.active{
+    background:#ff1744;
+    color:white;
+}
+
+body.dark .wishlist{
+    background:#1e293b;
+    color:#94a3b8;
+}
+
+body.dark .wishlist.active{
+    background:#ff1744;
+    color:white;
+}
