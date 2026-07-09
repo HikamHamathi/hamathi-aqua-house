@@ -4,6 +4,7 @@ import { FaHeart } from "react-icons/fa";
 import { useWishlist } from "../context/WishlistContext";
 import { FaShoppingCart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ProductCard({ id, image, name, price }) {
 
@@ -46,9 +47,16 @@ const handleAdd = () => {
         <FaHeart />
       </button> */}
 
-      <img src={image} alt={name} />
+      <Link to={`/product/${id}`}>
+        <img src={image} alt={name} />
+      </Link>
 
-      <h3>{name}</h3>
+      <Link
+        to={`/product/${id}`}
+        className="product-link"
+      >
+        <h3>{name}</h3>
+      </Link>
 
       <div className="rating">
         ⭐⭐⭐⭐⭐

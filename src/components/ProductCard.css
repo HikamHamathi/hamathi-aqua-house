@@ -174,3 +174,20 @@ body.dark .wishlist.active{
 .cart-icon{
     font-size:15px;
 }
+.product-link{
+    text-decoration:none;
+    color:inherit;
+}
+
+.product-link h3:hover{
+    color:#22c55e;
+}
+
+.product-card img{
+    cursor:pointer;
+    transition:.35s;
+}
+
+.product-card img:hover{
+    transform:scale(1.05);
+}

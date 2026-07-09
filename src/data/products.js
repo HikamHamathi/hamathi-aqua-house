@@ -1,19 +1,25 @@
 import guppy from "../assets/guppy.jpg";
+import betta1 from "../assets/betta1.jpg";
+import betta2 from "../assets/betta2.jpg";
+import betta3 from "../assets/betta3.jpg";
+import guppyvideo from "../assets/guppyvideo.mp4";
+
 const products = [
   {
   id: 1,
   category: "Fish",
-  name: "guppy fish",
-  image: guppy,
+  name: "Guppy Fish",
   price: 1800,
+  image: guppy,
+  images: [guppy, betta1, betta2, betta3],
+  video: guppyvideo,
   oldPrice: 2200,
   stock: 18,
   rating: 4.9,
   reviews: 126,
   badge: "Best Seller",
-  description:
-  "Healthy imported Guppy Fish. Bright colors, active swimmers, and perfect for community aquariums."
-  },
+  description: "Healthy imported Guppy Fish..."
+},
   // {
   //   id: 1,
   //   name: "Gold Fish",
