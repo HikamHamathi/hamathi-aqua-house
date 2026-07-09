@@ -44,7 +44,7 @@ function Contact() {
         </div>
 
         <div className="map">
-
+         
           <iframe
             title="Google Map"
             src="https://www.google.com/maps?q=Colombo,Sri%20Lanka&output=embed"

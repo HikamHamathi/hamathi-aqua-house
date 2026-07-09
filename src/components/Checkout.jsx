@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
 import "./Checkout.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Checkout({ setShowCheckout }) {
+function Checkout() {
 
   const { cart, clearCart } = useCart();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const [showSuccess, setShowSuccess] = useState(false);
 
   const [name, setName] = useState("");
@@ -200,7 +200,7 @@ function Checkout({ setShowCheckout }) {
         </button>
         <button
           className="back-btn"
-          onClick={() => setShowCheckout(false)}
+         onClick={() => navigate("/")}
         >
            Back to Shopping
         </button>

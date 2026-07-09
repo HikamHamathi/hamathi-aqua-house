@@ -1,20 +1,24 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Checkout from "./components/Checkout";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
-
-  const [search, setSearch] = useState("");
-  const [showCheckout, setShowCheckout] = useState(false);
-
   return (
-    <>
-      {showCheckout ? (
-  <Checkout setShowCheckout={setShowCheckout} />
-) : (
-  <Home setShowCheckout={setShowCheckout} />
-)}
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+
+      <Route
+        path="/checkout"
+        element={<Checkout />}
+      />
+
+      <Route
+        path="/product/:id"
+        element={<ProductDetails />}
+      />
+    </Routes>
   );
 }
 

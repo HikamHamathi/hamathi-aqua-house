@@ -3,6 +3,7 @@ import { useCart } from "../context/CartContext";
 import { FaHeart } from "react-icons/fa";
 import { useWishlist } from "../context/WishlistContext";
 import { FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function ProductCard({ id, image, name, price }) {
 
@@ -11,6 +12,8 @@ function ProductCard({ id, image, name, price }) {
   const { wishlist, toggleWishlist } = useWishlist();
 
   const isFavourite = wishlist.includes(id);
+
+  const navigate = useNavigate();
 
 const handleAdd = () => {
   addToCart({
@@ -55,13 +58,34 @@ const handleAdd = () => {
         Rs. {price}
       </p>
 
-    <button
+    {/* <button
       className="cart-btn"
       onClick={handleAdd}
     >
       <FaShoppingCart className="cart-icon" />
       <span>Add to Cart</span>
-    </button>
+    </button> */}
+
+    <div className="product-actions">
+
+  <button
+    className="cart-btn"
+    onClick={handleAdd}
+  >
+    🛒 Add to Cart
+  </button>
+
+  <button
+  className="buy-btn"
+  onClick={() => {
+    handleAdd();
+    navigate("/checkout");
+  }}
+>
+  ⚡ Buy Now
+</button>
+
+</div>
 
     </div>
   );

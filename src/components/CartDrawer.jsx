@@ -1,7 +1,10 @@
 import "./CartDrawer.css";
 import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
-function CartDrawer({ setShowCheckout }) {
+function CartDrawer() {
+  
+  const navigate = useNavigate();
 
   const {
   cart,
@@ -91,11 +94,11 @@ function CartDrawer({ setShowCheckout }) {
           className="checkout-btn"
           onClick={() => {
             closeCart();
-            setShowCheckout(true);
+            navigate("/checkout");
           }}
-          >
+        >
           Checkout
-          </button>
+        </button>
 
         </>
 

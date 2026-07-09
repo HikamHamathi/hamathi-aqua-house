@@ -1,12 +1,27 @@
+import guppy from "../assets/guppy.jpg";
 const products = [
   {
-    id: 1,
-    name: "Gold Fish",
-    price: 2500,
-    image: "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=600",
-    category: "Fish",
-    rating: 5
+  id: 1,
+  category: "Fish",
+  name: "guppy fish",
+  image: guppy,
+  price: 1800,
+  oldPrice: 2200,
+  stock: 18,
+  rating: 4.9,
+  reviews: 126,
+  badge: "Best Seller",
+  description:
+  "Healthy imported Guppy Fish. Bright colors, active swimmers, and perfect for community aquariums."
   },
+  // {
+  //   id: 1,
+  //   name: "Gold Fish",
+  //   price: 2500,
+  //   image: "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=600",
+  //   category: "Fish",
+  //   rating: 5
+  // },
 
   {
     id: 2,
@@ -52,6 +67,7 @@ const products = [
     category: "Plants",
     rating: 5
   }
+  
 ];
 
 export default products;

@@ -33,6 +33,7 @@
     font-size:18px;
 }
 
+
 .whatsapp-btn{
     display:inline-block;
     margin-top:25px;
@@ -115,4 +116,42 @@ body.dark .contact-info .contact-text{
 body.dark .whatsapp-btn{
     background:#22c55e;
     color:white;
+}
+@media (max-width: 768px){
+
+  .contact{
+    padding:60px 20px;
+  }
+
+  .contact-container{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+  }
+
+  .contact-info{
+    width:100%;
+    padding:25px;
+    box-sizing:border-box;
+  }
+
+  .map{
+    width:100%;
+  }
+
+  .map iframe{
+    width:100%;
+    height:300px;
+    border-radius:15px;
+    display:block;
+  }
+  .contact-info p{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:14px 0;
+    font-size:17px;
+    line-height:1.6;
+}
+
 }
