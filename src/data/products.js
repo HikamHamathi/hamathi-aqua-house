@@ -1,7 +1,7 @@
 import guppy from "../assets/guppy.jpg";
 import betta1 from "../assets/betta1.jpg";
-import betta2 from "../assets/betta2.jpg";
-import betta3 from "../assets/betta3.jpg";
+import a from "../assets/a.jpg";
+import b from "../assets/b.jpg";
 import guppyvideo from "../assets/guppyvideo.mp4";
 
 const products = [
