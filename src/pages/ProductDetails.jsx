@@ -112,14 +112,14 @@ if (!product) return <h2>Product Not Found</h2>;
           </button>
 
         </div>
-
+{/* 
         {product.video && (
           <div className="product-video">
             <video controls>
               <source src={product.video} type="video/mp4" />
             </video>
           </div>
-        )}
+        )} */}
 
       </div>
 
