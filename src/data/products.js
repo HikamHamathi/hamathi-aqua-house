@@ -8,7 +8,7 @@ const products = [
   {
   id: 1,
   category: "Fish",
-  name: "Guppy Fish",
+  name: "Guppy Fishs",
   price: 1800,
   image: guppy,
   images: [guppy, betta1, betta2, betta3],
