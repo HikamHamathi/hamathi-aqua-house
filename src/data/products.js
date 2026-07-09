@@ -11,7 +11,7 @@ const products = [
   name: "Guppy Fish",
   price: 1800,
   image: guppy,
-  images: [guppy, betta1, betta2, betta3],
+  images: [guppy, betta1, a, b],
   video: guppyvideo,
   oldPrice: 2200,
   stock: 18,
