@@ -19,7 +19,19 @@ import { useWishlist } from "../context/WishlistContext";
 
 import WishlistDrawer from "./WishlistDrawer";
 
+import { Link, useNavigate } from "react-router-dom";
+
 function Navbar() {
+
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/login");
+    window.location.reload();
+  };
+
   const { wishlist } = useWishlist();
   const [menuOpen, setMenuOpen] = useState(false);
   const [wishlistOpen, setWishlistOpen] = useState(false);
@@ -72,6 +84,15 @@ function Navbar() {
         <li onClick={() => setMenuOpen(false)}>Accessories</li>
         <li onClick={() => setMenuOpen(false)}>Plants</li>
         <li onClick={() => setMenuOpen(false)}>Contact</li>
+
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+
+        <li>
+          <Link to="/register">Register</Link>
+        </li>
+
       </ul>
 
       <div className="right">
@@ -124,6 +145,43 @@ function Navbar() {
           </span>
         )}
       </button>
+
+      {user ? (
+        <>
+          <span
+            style={{
+              color: "white",
+              fontWeight: "bold",
+              marginRight: "10px",
+            }}
+          >
+            👋 {user.name}
+          </span>
+
+          <button
+            className="login-btn"
+            onClick={logout}
+          >
+            Logout
+          </button>
+        </>
+      ) : (
+        <>
+          <Link
+            to="/login"
+            className="login-btn"
+          >
+            Login
+          </Link>
+
+          <Link
+            to="/register"
+            className="register-btn"
+          >
+            Register
+          </Link>
+        </>
+      )}
 
         <button
         className="theme-btn"
