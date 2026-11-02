@@ -72,7 +72,16 @@ const products = [
     image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600",
     category: "Plants",
     rating: 5
-  }
+  },
+
+  {
+    id: 2,
+    name: "Angel",
+    price: 2000,
+    image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600",
+    category: "Fish",
+    rating: 5
+  },
   
 ];
 
